@@ -26,8 +26,24 @@
         background-size: contain;
         background-color: aquamarine;
         position: relative;
-        top: 80px;
-        left: 60px;
+        /* top: 80px;
+        left: 60px; */
+        animation: example 4s linear infinite;
+        offset-path: path("M60,95 L325, 95 V200, 200 L620,195");
+      }
+      @keyframes example {
+        25% {
+          background-color: red;
+        }
+        50% {
+          background-color: pink;
+        }
+        75% {
+          background-color: blueviolet;
+        }
+        100% {
+          offset-distance: 100%;
+        }
       }
     </style>
   </head>
@@ -36,5 +52,4 @@
       <div class="boxson"></div>
     </div>
   </body>
-  `
 </html>
